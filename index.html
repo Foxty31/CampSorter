@@ -3,33 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="script.js"></script>
 </head>
 <body>
+    <section class="navbar">
+        <h1>BUILDER</h1>
+        <div>
+            <a href="">NOVO</a>
+            <a href="">CAMPS</a>
+            <a href="">SOBRE</a>
+        </div>
+    </section>
     <section class="pagina-inicial">
 
         <div class="titulo">
-            <h1>EFEITO PARALLAX</h1>
+            <h1>CAMP SORTER</h1>
         </div>
 
         <div class="loading">
             <div class="shadow"></div>
             <div class="mask"></div>
         </div>
-
-        <div class="onda" id="onda1"></div>
-        <div class="onda" id="onda2"></div>
-        <div class="onda" id="onda3"></div>
-        <div class="onda" id="onda4"></div>
-
     </section>
-    <Section>
-            <h1>Parallax</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt impedit cum similique rem assumenda nulla aspernatur ipsa illum magni natus reiciendis est architecto quibusdam libero itaque, esse neque nam vel?</p>
-            <br><br>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis incidunt quisquam quam. Reiciendis maiores consectetur, perspiciatis ipsa ratione ab consequuntur eligendi praesentium, saepe natus voluptas voluptatum officiis accusantium odit consequatur eius quae doloremque tempore. Dicta impedit recusandae voluptates porro?</p>
-    </Section>
+
+    <section class="descricao" id="sobre">
+        <!-- Container interno para limitar e centralizar apenas os textos e cards -->
+        <div class="descricao-container">
+
+            <!-- Cabeçalho -->
+            <div class="descricao-header">
+                <span class="tag-headline">O FIM DA CONFUSÃO NAS CHAVES</span>
+                <h1>SEU CAMPEONATO. NOSSAS REGRAS. ZERO COMPLICAÇÃO.</h1>
+                <p class="subtitulo">
+                    O <strong>BUILDER</strong> é o ecossistema definitivo para quem quer criar, gerenciar e dominar torneios competitivos em questão de segundos.
+                </p>
+            </div>
+
+            <!-- Texto de Apresentação -->
+            <div class="descricao-story">
+                <p>
+                    Esqueça as planilhas manuais, anotações em papéis soltos e discussões em grupos de mensagem para decidir quem joga contra quem. Desenvolvido sob medida para a comunidade gamer e competitiva, o <strong>BUILDER</strong> foi projetado com um único propósito: transformar a organização de campeonatos em uma experiência fluida, rápida e imersiva.
+                </p>
+                <p>
+                    Seja para um corujão entre amigos, uma disputa interna de guildas ou uma liga profissional, a nossa plataforma entrega total controle sobre o chaveamento e o ritmo das partidas sem exigir nenhum conhecimento técnico.
+                </p>
+            </div>
+
+            <!-- Grid com os Recursos / Funcionalidades -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Sorteio de Chaves em 1 Clique</h3>
+                    <p>Cadastre os nicknames ou times e deixe que nosso algoritmo de geração aleatória monte os confrontos de forma 100% neutra e imparcial instantaneamente.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Formatos Flexíveis</h3>
+                    <p>Adapte o torneio ao seu modo de jogo. Suporte completo para duelos individuais <strong>1v1</strong>, confrontos de duplas <strong>2v2</strong> ou guerras de esquadrão em equipe.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">👑</div>
+                    <h3>Gestão em Tempo Real</h3>
+                    <p>Defina o vencedor de cada rodada com um clique. O sistema atualiza a árvore do torneio automaticamente e projeta os próximos confrontos até a grande final.</p>
+                </div>
+            </div>
+
+            <!-- Rodapé de Chamada para Ação (CTA) -->
+            <div class="descricao-footer">
+                <h2>PRONTO PARA ENTRAR NA ARENA?</h2>
+                <p>Monte seu primeiro campeonato em menos de 1 minuto e veja a magia acontecer.</p>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>
