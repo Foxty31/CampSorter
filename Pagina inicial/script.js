@@ -25,7 +25,7 @@ function criarEContinuar(e) {
     localStorage.setItem('torneioAtual', JSON.stringify(novoTorneio));
 
     // Redireciona para a tela de gerenciamento/configuração do torneio
-    window.location.href = "arena.html"; 
+    window.location.href = "../CampVisualizer/index.html"; 
 }
 
 function atualizarPreview() {
@@ -43,3 +43,17 @@ function atualizarPreview() {
 
     previewModo.innerText = modoInput;
 }
+
+async function checarServidorJava() {
+    try {
+        const response = await fetch('http://localhost:8080/api/status');
+        const dados = await response.json();
+        
+        console.log("Resposta do Java:", dados.mensagem);
+    } catch (error) {
+        console.error("Erro ao conectar no Java:", error);
+    }
+}
+
+// Executa a função
+checarServidorJava();

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE MATCHER - Arena do Torneio</title>
+    <!-- Fontes e Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR / DASHBOARD HEADER -->
+    <header class="arena-nav">
+        <div class="nav-left">
+            <a href="../Pagina inicial/index.html" class="btn-voltar">← SAIR DA ARENA</a>
+            <div class="arena-title-group">
+                <span class="status-badge" id="torneio-status">EM CONFIGURAÇÃO</span>
+                <h1 id="torneio-nome">CARREGANDO TORNEIO...</h1>
+            </div>
+        </div>
+        <div class="nav-right">
+            <span class="modo-tag" id="torneio-modo">MODO: --</span>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (LAYOUT EM 2 COLUNAS) -->
+    <main class="arena-container">
+
+        <!-- PAINEL DA ESQUERDA: Configurações & Inscrição de Jogadores -->
+        <section class="panel-card config-panel">
+            <div class="panel-header">
+                <h2>INSCREVER PARTICIPANTES</h2>
+                <p>Adicione os nicknames dos jogadores ou times para formar a chave.</p>
+            </div>
+
+            <!-- Formulário de Adicionar Jogadores -->
+            <div class="add-player-box">
+                <input type="text" id="input-nickname" placeholder="Nickname ou Nome do Time..." autocomplete="off">
+                <button type="button" id="btn-add-player" onclick="adicionarJogador()">+ ADICIONAR</button>
+            </div>
+
+            <!-- Lista de Inscritos -->
+            <div class="inscritos-wrapper">
+                <div class="inscritos-header">
+                    <span>JOGADORES CONFIRMADOS (<strong id="qtd-jogadores">0</strong>)</span>
+                    <button type="button" class="btn-clear-all" onclick="limparJogadores()">Limpar Todos</button>
+                </div>
+                <ul id="lista-inscritos" class="lista-inscritos">
+                    <!-- Itens inseridos via JavaScript entrarão aqui -->
+                </ul>
+            </div>
+
+            <!-- Ação Final: Gerar Torneio -->
+            <button type="button" class="btn-iniciar-torneio" onclick="enviarParaJava()">
+                <span>GERAR CHAVEAMENTO NO JAVA</span> ⚔️
+            </button>
+        </section>
+
+        <!-- PAINEL DA DIREITA: Visualização / Area das Chaves -->
+        <section class="panel-card bracket-panel">
+            <div class="panel-header">
+                <h2>ÁRVORE DO TORNEIO</h2>
+                <p>Acompanhe os confrontos gerados para esta arena.</p>
+            </div>
+
+            <!-- Estado Vazio (Antes de Gerar as Chaves) -->
+            <div id="bracket-empty" class="bracket-empty">
+                <div class="empty-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF2A2A" stroke-width="1.5">
+                        <line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
+                    </svg>
+                </div>
+                <h3>CHAVEAMENTO NÃO GERADO</h3>
+                <p>Adicione pelo menos 2 participantes no painel ao lado e clique em <strong>Gerar Chaveamento</strong> para criar os confrontos.</p>
+            </div>
+
+            <!-- Container onde a Árvore do Java será renderizada -->
+            <div id="bracket-render" class="bracket-render" style="display: none;">
+                <!-- Os confrontos vindos da API Spring Boot vão aparecer aqui -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

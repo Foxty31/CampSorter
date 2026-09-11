@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR DA ARENA */
+.arena-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    background: #080808;
+    border-bottom: 1px solid rgba(255, 42, 42, 0.2);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-voltar {
+    color: #888;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    color: #ff2a2a;
+}
+
+.arena-title-group h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.status-badge {
+    font-size: 0.65rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff2a2a;
+    background: rgba(255, 42, 42, 0.1);
+    border: 1px solid rgba(255, 42, 42, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.modo-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: #aaa;
+    background: #111;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* CONTAINER PRINCIPAL */
+.arena-container {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    flex: 1;
+}
+
+.panel-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.panel-header p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* CAMPO DE ADD JOGADOR */
+.add-player-box {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.add-player-box input {
+    flex: 1;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.add-player-box input:focus {
+    border-color: #ff2a2a;
+}
+
+.add-player-box button {
+    background: rgba(255, 42, 42, 0.15);
+    border: 1px solid rgba(255, 42, 42, 0.4);
+    color: #ff4d4d;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-player-box button:hover {
+    background: #ff2a2a;
+    color: #fff;
+}
+
+/* LISTA DE INSCRITOS */
+.inscritos-wrapper {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inscritos-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.btn-clear-all {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.btn-clear-all:hover { color: #ff2a2a; }
+
+.lista-inscritos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.lista-inscritos li {
+    background: #141414;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    border-left: 3px solid #ff2a2a;
+}
+
+.lista-inscritos li button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+/* BOTÃO DE GERAR */
+.btn-iniciar-torneio {
+    background: linear-gradient(90deg, #b30000 0%, #ff2a2a 100%);
+    border: none;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-iniciar-torneio:hover {
+    box-shadow: 0 0 20px rgba(255, 42, 42, 0.4);
+}
+
+/* ESTADO VAZIO BRACKET */
+.bracket-panel {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bracket-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+}
+
+.empty-icon {
+    background: rgba(255, 42, 42, 0.05);
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 42, 42, 0.2);
+}
+
+.bracket-empty h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+}
+
+.bracket-empty p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .arena-container {
+        grid-template-columns: 1fr;
+    }
+}
